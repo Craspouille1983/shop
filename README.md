@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 # shop
 Projet en Vue3 pour inclure dans le portfolio
-=======
 # shop_game
 
 ## Project setup
@@ -26,4 +24,4 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> 67b44f9 (init)
+
