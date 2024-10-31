@@ -1,12 +1,15 @@
 <template>
     <nav>
+        <figure><img src="../assets/crasp_2_logo.png" alt="logo"></figure>
         <div class="burger"><span></span><span></span><span></span></div>
         <ul v-for="item in itemsNav" :key="`menu-${item.id}`" @error="console.log(item)">
             <li>
                 <a :href="item.menuUrl">
+                    <!-- Glitch effect -->
                     <span aria-hidden="true">{{ item.menu }}</span>
                     {{ item.menu }}
                     <span aria-hidden="true">{{ item.menu }}</span>
+                    <!-- Glitch effect -->
                 </a>
             </li>
         </ul>
@@ -43,15 +46,26 @@ export default {
 }
 
 nav {
-    background: rgba(0, 0, 0, .25);
+    background: rgba(3, 3, 3, .95);
     position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
     top: 0;
     width: 100vw;
-    height: 4.5ex;
+    height: 8.5ex;
+    padding: .75rem 4rem;
     z-index: 10;
+}
+
+nav figure {
+    height: 100%;
+    filter: contrast(1.75);
+}
+
+nav figure img {
+    height: 100%;
+    object-fit: cover;
 }
 
 nav ul {
@@ -66,7 +80,8 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: "Orbitron", sans-serif;
+    font-family: "Climate Crisis", sans-serif;
+    font-variation-settings: "YEAR" 2012;
     font-weight: bold;
     font-optical-sizing: auto;
     color: #fff;

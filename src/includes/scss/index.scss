@@ -18,7 +18,7 @@ nav {
                 display: block;
                 position: relative;
                 text-transform: uppercase;
-                
+
                 span {
                     position: absolute;
                     top: 0;
@@ -38,6 +38,7 @@ nav {
                         -.25em -.05em 0 rgba(0, 255, 0, .5),
                         .25em .05em 0 rgba(0, 0, 255, .5);
 
+
                     span:first-child {
                         opacity: .8;
                         clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
@@ -54,6 +55,84 @@ nav {
                 }
             }
         }
+    }
+}
+
+.carousel__prev,
+.carousel__next {
+    height: 100% !important;
+}
+
+main {
+    width: calc(100vw - 18rem);
+    margin: 0 auto;
+
+    .card-container {
+        display: flex;
+        column-gap: 1em;
+
+        .card {
+            height: 540px;
+            max-width: 350px;
+            width: 350px;
+            overflow: hidden;
+            color: #111;
+
+            .card-header {
+                height: calc(540px / 2);
+
+                figure {
+                    height: inherit;
+                    width: inherit;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .card-bottom {
+                height: calc(540px / 2);
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-direction: column;
+
+                h3 {
+                    font-size: 1.5em;
+                    font-family: "Climate Crisis", sans-serif;
+                    font-variation-settings: "YEAR" 1987;
+                }
+
+                p {
+                    text-align: left;
+                    width: 100%;
+                }
+
+                p:last-of-type {
+                    font-family: "Pangolin", cursive;
+                    font-weight: bolder;
+                    font-size: 1.25em;
+                    text-align: right;
+                }
+
+                button {
+                    align-self: center;
+                }
+            }
+        }
+
+    }
+}
+
+@media (hover: hover) {
+
+    .carousel__prev:hover svg path,
+    .carousel__next:hover svg path {
+        filter: drop-shadow(0 0 .0015em #00ff00) drop-shadow(0 0 .0019em #00ff00) drop-shadow(0 0 .015em #00ff00) drop-shadow(0 0 .025em #00ff00) drop-shadow(0 0 .04em #00ff00) drop-shadow(0 0 .055em #00ff00) drop-shadow(0 0 .06em #00ff00) drop-shadow(0 0 .075em #00ff00);
+        fill: #00ff00;
     }
 }
 
