@@ -1,27 +1,28 @@
 <template>
-    <div class="card">
-        <div class="card-header">
+    <div class="exergue-game">
+        <div class="left-panel">
             <figure><img :src="require(`@/assets/${src}`)" :alt="descriptionImg"></figure>
         </div>
-        <div class="card-bottom">
+        <div class="right-panel">
+            <div><span></span><span></span></div>
+            <div><span></span><span></span></div>
             <h3>{{ title }}</h3>
             <p>{{ description }}</p>
-            <p>{{ prix }} €</p>
-            <butonShop :modelValue="btnText" />
+            <a :href="link"></a>
         </div>
     </div>
 </template>
+
 <script>
-    import butonShop from './btnComposant.vue'
     export default {
-        name: 'cardGame',
-        components: {
-            butonShop,
-        },
+        name: 'exergueGames',
         props: {
             src: {
                 type: URL,
                 default: 'crasp_2_logo.png'
+            },
+            link: {
+                type: URL,
             },
             descriptionImg: {
                 type: String,

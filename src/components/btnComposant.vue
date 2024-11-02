@@ -47,14 +47,14 @@ button {
 			position: absolute;
 			top: 0;
 			left: 0;
-			stroke-width: 2;
+			stroke-width: 3;
 			stroke: rgba(0, 255, 0, 1);
 			fill: none;
-			width: calc(100% - 2px);
+			width: 100%;
 			height: calc(100% - 2px);
 			stroke-dasharray: 500;
 			stroke-dashoffset: -500;
-			transition: 1s;
+			transition: .75s;
 		}
 	}
 	&::before {
